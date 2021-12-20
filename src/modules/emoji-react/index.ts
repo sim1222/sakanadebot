@@ -42,6 +42,7 @@ export default class extends Module {
 			if (!customEmojis.every((val, i, arr) => val === arr[0])) return;
 
 			this.log(`Custom emoji detected - ${customEmojis[0]}`);
+			if (customEmojis[0]	== ':nanmowakaran:') return react(':murishite:');
 
 			return react(customEmojis[0]);
 		}
