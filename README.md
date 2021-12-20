@@ -4,7 +4,8 @@ Misskey 用逆なでリアクション Bot です（[ai](https://github.com/syui
 
 ## 機能
 
-未定
+ping をめんどくさがる
+フォローをめんどくさがる
 
 ## インストール
 
