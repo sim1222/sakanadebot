@@ -47,7 +47,7 @@ export default class extends Module {
 			if (customEmojis[0] == ':nanmowakaran:') return react(':murishite:');
 			if (customEmojis[0] == ':ohayougozaimasu:') return react(':neyoune:');
 
-			return react(customEmojis[0]);
+			// return react(customEmojis[0]);
 		}
 
 		const emojis = parse(note.text).map(x => x.text);
@@ -71,7 +71,8 @@ export default class extends Module {
 		//ここに単語に対する絵文字処理を書く
 		if (includes(note.text, ['掃除', 'そうじ'])) return react(':dame:');
 		if (includes(note.text, ['おはよう', '起きた', 'おきた'])) return react(':neyoune:');
-		if (includes(note.text, ['おやすみ', 'ねる', '寝る', 'ねむたい'])) return react(':dame:');
+		if (includes(note.text, ['おやすみ', 'ねる', '寝る', 'ねむたい', 'ねむい'])) return react(':dame:');
+		if (includes(note.text, ['逆なでBot', '逆なで'])) return react(':ha_q:');
 
 		if (includes(note.text, ['寿司', 'sushi']) || note.text === 'すし') return react('🍣');
 	}
