@@ -47,7 +47,7 @@ export default class extends Module {
 			if (customEmojis[0] == ':nanmowakaran:') return react(':murishite:');
 			if (customEmojis[0] == ':ohayougozaimasu:') return react(':neyoune:');
 
-			return react(customEmojis[0]);
+			// return react(customEmojis[0]);
 		}
 
 		const emojis = parse(note.text).map(x => x.text);
