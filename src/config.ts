@@ -5,13 +5,9 @@ type Config = {
 	wsUrl: string;
 	apiUrl: string;
 	keywordEnabled: boolean;
-	reversiEnabled: boolean;
 	notingEnabled: boolean;
-	chartEnabled: boolean;
-	serverMonitoring: boolean;
 	mecab?: string;
 	mecabDic?: string;
-	weatherlocation?: string;
 };
 
 const config = require('../config.json');
