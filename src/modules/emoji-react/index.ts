@@ -20,15 +20,16 @@ export default class extends Module {
 		return {};
 	}
 
+	
 	@autobind
 	private async onNote(note: Note) {
 		if (note.reply != null) return;
 		if (note.text == null) return;
-		if (note.text.includes('@')) return; // (自分または他人問わず)メンションっぽかったらreject
+		//if (note.text.includes('@')) return; // (自分または他人問わず)メンションっぽかったらreject
 
 		const react = async (reaction: string, immediate = false) => {
 			if (!immediate) {
-				await delay(1500);
+				await delay(100);
 			}
 			this.ai.api('notes/reactions/create', {
 				noteId: note.id,
@@ -72,4 +73,6 @@ export default class extends Module {
 
 		if (includes(note.text, ['寿司', 'sushi']) || note.text === 'すし') return react('🍣');
 	}
+
+
 }

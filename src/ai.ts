@@ -161,10 +161,10 @@ export default class 藍 {
 			if (data.text == null && (data.files || []).length == 0) return;
 
 			// リアクションする
-			this.api('notes/reactions/create', {
-				noteId: data.id,
-				reaction: 'love'
-			});
+			//this.api('notes/reactions/create', {
+			//	noteId: data.id,
+			//	reaction: 'love'
+			//});
 		});
 
 		// メッセージ
@@ -271,15 +271,15 @@ export default class 藍 {
 			this.api('messaging/messages/read', {
 				messageId: msg.id,
 			});
-		} else {
+		} //else {
 			// リアクションする
-			if (reaction) {
-				this.api('notes/reactions/create', {
-					noteId: msg.id,
-					reaction: reaction
-				});
-			}
-		}
+			//if (reaction) {
+			//	this.api('notes/reactions/create', {
+			//		noteId: msg.id,
+			//		reaction: reaction
+			//	});
+			//}
+		//}
 	}
 
 	@autobind
