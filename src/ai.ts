@@ -102,7 +102,7 @@ export default class 藍 {
 
 	@autobind
 	public log(msg: string) {
-		log(chalk`[{magenta AiOS}]: ${msg}`);
+		log(chalk`[{magenta SAKANADE OS}]: ${msg}`);
 	}
 
 	@autobind
@@ -197,7 +197,7 @@ export default class 藍 {
 
 		setInterval(this.logWaking, 10000);
 
-		this.log(chalk.green.bold('Ai am now running!'));
+		this.log(chalk.green.bold('SAKANADE BOT am now running!'));
 	}
 
 	/**
