@@ -1,6 +1,6 @@
 ## これなに
 
-Misskey 用リアクション Bot です（[ai](https://github.com/syuilo/ai)ベース）
+Misskey 用逆なでリアクション Bot です（[ai](https://github.com/syuilo/ai)ベース）
 
 ## 機能
 
@@ -16,13 +16,10 @@ Misskey 用リアクション Bot です（[ai](https://github.com/syuilo/ai)ベ
 ```json
 {
 	"host": "https:// + あなたのインスタンスのURL (末尾の / は除く)",
-	"i": "藍として動かしたいアカウントのアクセストークン",
+	"i": "逆なでBotとして動かしたいアカウントのアクセストークン",
 	"master": "管理者のユーザー名(オプション)",
 	"notingEnabled": "ランダムにノートを投稿する機能を無効にする場合は false を入れる",
 	"keywordEnabled": "キーワードを覚える機能 (MeCab が必要) を有効にする場合は true を入れる (無効にする場合は false)",
-	"chartEnabled": "チャート機能を無効化する場合は false を入れてください",
-	"reversiEnabled": "藍とリバーシで対局できる機能を有効にする場合は true を入れる (無効にする場合は false)",
-	"serverMonitoring": "サーバー監視の機能を有効にする場合は true を入れる (無効にする場合は false)",
 	"mecab": "MeCab のインストールパス (ソースからインストールした場合、大体は /usr/local/bin/mecab)",
 	"mecabDic": "MeCab の辞書ファイルパス (オプション)"
 }
