@@ -12,12 +12,12 @@ import _log from './utils/log';
 const pkg = require('../package.json');
 
 import CoreModule from './modules/core';
-import PingModule from './modules/ping';
 import EmojiModule from './modules/emoji';
 import EmojiReactModule from './modules/emoji-react';
 import KeywordModule from './modules/keyword';
 import FollowModule from './modules/follow';
 import NotingModule from './modules/noting';
+import PingModule from './modules/ping';
 
 console.log('SAKANADE BOT');
 
@@ -50,9 +50,9 @@ promiseRetry(retry => {
 		new CoreModule(),
 		new EmojiModule(),
 		new EmojiReactModule(),
-		new PingModule(),
 		new FollowModule(),
 		new NotingModule(),
+		new PingModule(),
 	]);
 }).catch(e => {
 	log(chalk.red('Failed to fetch the account'));
