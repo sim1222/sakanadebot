@@ -18,6 +18,10 @@ export default class extends Module {
 			msg.reply('PONG!って打つのめんどくさいんですよ！', {
 				immediate: true
 			});
+			this.ai.api('notes/reactions/create', {
+				noteId: msg.id,
+				reaction: ':eltu:'
+			});
 			return true;
 		} else {
 			return false;

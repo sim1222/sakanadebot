@@ -19,13 +19,15 @@ export default class extends Module {
 				this.ai.api('following/create', {
 					userId: msg.userId,
 				});
+				msg.reply('しょうがないですね…', {immediate: true});
 				return {
-					reaction: msg.friend.love >= 0 ? 'like' : null
+					reaction: msg.friend.love >= 0 ? ':eltu:' : null
 				};
-			} else {
+				} else {
 				return {
-					reaction: msg.friend.love >= 0 ? 'hmm' : null
+					reaction: msg.friend.love >= 0 ? ':eltu:' : null
 				};
+
 			}
 		} else {
 			return false;
