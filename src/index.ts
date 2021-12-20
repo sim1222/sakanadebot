@@ -43,7 +43,7 @@ promiseRetry(retry => {
 	const acct = `@${account.username}`;
 	log(chalk.green(`Account fetched successfully: ${chalk.underline(acct)}`));
 
-	log('Starting AiOS...');
+	log('Starting SAKANADE BOT...');
 
 	// 藍起動
 	new sakanadebot(account, [
@@ -51,10 +51,8 @@ promiseRetry(retry => {
 		new EmojiModule(),
 		new EmojiReactModule(),
 		new PingModule(),
-		new ServerModule(),
 		new FollowModule(),
 		new NotingModule(),
-		new PollModule(),
 	]);
 }).catch(e => {
 	log(chalk.red('Failed to fetch the account'));
