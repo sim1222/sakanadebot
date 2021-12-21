@@ -70,7 +70,7 @@ export default class extends Module {
 
 		//ここに単語に対する絵文字処理を書く
 		if (includes(note.text, ['掃除', 'そうじ'])) return react(':dame:');
-		if (includes(note.text, ['おはよう', '起きた', 'おきた'])) return react(':neyoune:');
+		if (includes(note.text, ['おはよう', '起きた', '起きた', 'おきた', 'おきる'])) return react(':neyoune:');
 		if (includes(note.text, ['おやすみ', 'ねる', '寝る', 'ねむたい', 'ねむい'])) return react(':dame:');
 		if (includes(note.text, ['逆なでBot', '逆なで', '逆にゃでBot', '逆にゃで'])) return react(':ha_q:');
 
