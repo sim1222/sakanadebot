@@ -74,7 +74,8 @@ export default class extends Module {
 		if (includes(note.text, ['おやすみ', 'ねる', '寝る', 'ねむたい', 'ねむい'])) return react(':dame:');
 		if (includes(note.text, ['逆なでBot', '逆なで', '逆にゃでBot', '逆にゃで'])) return react(':ha_q:');
 		if (includes(note.text, ['つらい', 'もうやだ', 'やめたい'])) return react(':murishite:');
-		
+		if (includes(note.text, ['ていい?', 'ていい？',])) return react(':dame:');
+
 		if (includes(note.text, ['寿司', 'sushi']) || note.text === 'すし') return react('🍣');
 	}
 
