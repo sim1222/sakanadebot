@@ -29,7 +29,7 @@ export default class extends Module {
 
 		const react = async (reaction: string, immediate = false) => {
 			if (!immediate) {
-				await delay(100);
+				await delay(1500);
 			}
 			this.ai.api('notes/reactions/create', {
 				noteId: note.id,
