@@ -57,7 +57,7 @@ export default class extends Module {
 		if (includes(note.text, ['つらい', 'もうやだ', 'やめたい'])) return react(':murishite:');
 		if (includes(note.text, ['ていい?', 'ていい？', 'てもいい?', 'てもいい？'])) return react(':dame:');
 		if (includes(note.text, ['きたにょ', '来たにょ'])) return react(':kaeroune:');
-		if (includes(note.text, ['寿司', 'sushi','すし'])) return react('🍮');
+		if (includes(note.text, ['寿司', 'sushi','すし', '🍣'])) return react('🍮');
 		if (includes(note.text, ['プリン', '🍮','ぷりん'])) return react('🍣');
 		
 		const emojis = parse(note.text).map(x => x.text);
