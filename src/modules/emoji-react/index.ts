@@ -49,7 +49,17 @@ export default class extends Module {
 
 			// return react(customEmojis[0]);
 		}
-
+		//ここに単語に対する絵文字処理を書く
+		if (includes(note.text, ['掃除', 'そうじ'])) return react(':dame:');
+		if (includes(note.text, ['おはよう', '起きた', '起きた', 'おきた', 'おきる'])) return react(':neyoune:');
+		if (includes(note.text, ['おやすみ', 'ねる', '寝る', 'ねむたい', 'ねむい'])) return react(':dame:');
+		if (includes(note.text, ['逆なでBot', '逆なで', '逆にゃでBot', '逆にゃで'])) return react(':ha_q:');
+		if (includes(note.text, ['つらい', 'もうやだ', 'やめたい'])) return react(':murishite:');
+		if (includes(note.text, ['ていい?', 'ていい？', 'てもいい?', 'てもいい？'])) return react(':dame:');
+		if (includes(note.text, ['きたにょ', '来たにょ'])) return react(':kaeroune:');
+		if (includes(note.text, ['寿司', 'sushi','すし'])) return react('🍮');
+		if (includes(note.text, ['プリン', '🍮','ぷりん'])) return react('🍣');
+		
 		const emojis = parse(note.text).map(x => x.text);
 		if (emojis.length > 0) {
 			// 絵文字が複数種類ある場合はキャンセル
@@ -68,16 +78,6 @@ export default class extends Module {
 			return react(reaction);
 		}
 
-		//ここに単語に対する絵文字処理を書く
-		if (includes(note.text, ['掃除', 'そうじ'])) return react(':dame:');
-		if (includes(note.text, ['おはよう', '起きた', '起きた', 'おきた', 'おきる'])) return react(':neyoune:');
-		if (includes(note.text, ['おやすみ', 'ねる', '寝る', 'ねむたい', 'ねむい'])) return react(':dame:');
-		if (includes(note.text, ['逆なでBot', '逆なで', '逆にゃでBot', '逆にゃで'])) return react(':ha_q:');
-		if (includes(note.text, ['つらい', 'もうやだ', 'やめたい'])) return react(':murishite:');
-		if (includes(note.text, ['ていい?', 'ていい？', 'てもいい?', 'てもいい？'])) return react(':dame:');
-		if (includes(note.text, ['きたにょ', '来たにょ'])) return react(':kaeroune:');
-
-		if (includes(note.text, ['寿司', 'sushi']) || note.text === 'すし') return react('🍣');
 	}
 
 
