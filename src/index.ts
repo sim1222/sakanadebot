@@ -18,6 +18,7 @@ import KeywordModule from './modules/keyword';
 import FollowModule from './modules/follow';
 import NotingModule from './modules/noting';
 import PingModule from './modules/ping';
+import FortuneModule from './modules/fortune';
 
 console.log('SAKANADE BOT');
 
@@ -53,6 +54,7 @@ promiseRetry(retry => {
 		new FollowModule(),
 		new NotingModule(),
 		new PingModule(),
+		new FortuneModule(),
 	]);
 }).catch(e => {
 	log(chalk.red('Failed to fetch the account'));
