@@ -19,6 +19,10 @@ import FollowModule from './modules/follow';
 import NotingModule from './modules/noting';
 import PingModule from './modules/ping';
 import FortuneModule from './modules/fortune';
+import TimerModule from './modules/timer';
+import TalkModule from './modules/talk';
+import SleepReportModule from './modules/sleep-report';
+import ReminderModule from './modules/reminder';
 
 console.log('SAKANADE BOT');
 
@@ -55,6 +59,10 @@ promiseRetry(retry => {
 		new NotingModule(),
 		new PingModule(),
 		new FortuneModule(),
+		new TimerModule(),
+		new TalkModule(),
+		new SleepReportModule(),
+		new ReminderModule(),
 	]);
 }).catch(e => {
 	log(chalk.red('Failed to fetch the account'));
