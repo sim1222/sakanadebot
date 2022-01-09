@@ -383,7 +383,7 @@ export default {
 
 	sleepReport: {
 		report: hours => `ぬおーーーーー、${hours}時間くらい寝てた`,
-		reportUtatane: 'ぬおーーーーー、寝てた,
+		reportUtatane: 'ぬおーーーーー、寝てた',
 	},
 
 	noting: {
