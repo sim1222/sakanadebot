@@ -4,15 +4,15 @@ export default {
 	core: {
 		setNameOk: name => `わかりました。これからは${name}とお呼びしますね！`,
 
-		san: 'さん付けした方がいいですか？',
+		san: 'さん付けしましょうか？',
 
-		yesOrNo: '「はい」か「いいえ」しかわからないんです...',
+		yesOrNo: '「はい」か「いいえ」以外で喋らないでください',
 
-		hello: name => name ? `こんにちは、${name}♪` : `こんにちは♪`,
+		hello: name => name ? `こんばんわ、${name}` : `こんばんわ`,
 
-		helloNight: name => name ? `こんばんは、${name}♪` : `こんばんは♪`,
+		helloNight: name => name ? `こんにちは、${name}` : `こんにちは`,
 
-		goodMorning: (tension, name) => name ? `おはようございます、${name}！${tension}` : `おはようございます！${tension}`,
+		goodMorning: (tension, name) => name ? `寝ましょうね、${name}！${tension}` : `寝ましょうね！${tension}`,
 
 		/*
 		goodMorning: {
@@ -22,7 +22,7 @@ export default {
 		},
 */
 
-		goodNight: name => name ? `おやすみなさい、${name}！` : 'おやすみなさい！',
+		goodNight: name => name ? `まだ寝てはだめです、${name}！` : 'まだ寝てはだめです！',
 
 		omedeto: name => name ? `ありがとうございます、${name}♪` : 'ありがとうございます♪',
 
@@ -79,9 +79,9 @@ export default {
 		requireMoreLove: 'もっと仲良くなったら考えてあげてもいいですよ？',
 
 		nadenade: {
-			normal: 'ひゃっ…！ びっくりしました',
+			normal: 'うわ！ びっくりしました',
 
-			love2: ['わわっ… 恥ずかしいです', 'あうぅ… 恥ずかしいです…', 'ふやぁ…？'],
+			love2: ['わわっ… まあ次はやめでくださいね…', 'あうぅ… 恥ずかしいです…', 'ふやぁ…？'],
 
 			love3: ['んぅ… ありがとうございます♪', 'わっ、なんだか落ち着きますね♪', 'くぅんっ… 安心します…', '眠くなってきました…'],
 
@@ -326,7 +326,7 @@ export default {
 	 * タイマー
 	 */
 	timer: {
-		set: 'わかりました！',
+		set: '一応数えておきますね',
 
 		invalid: 'うーん...？',
 
@@ -341,23 +341,23 @@ export default {
 	reminder: {
 		invalid: 'うーん...？',
 
-		reminds: 'やること一覧です！',
+		reminds: 'やらないといけないことリストです',
 
 		notify: (name) => name ? `${name}、これやりましたか？` : `これやりましたか？`,
 
 		notifyWithThing: (thing, name) => name ? `${name}、「${thing}」やりましたか？` : `「${thing}」やりましたか？`,
 
 		done: (name) => name ? [
-			`よく出来ました、${name}♪`,
-			`${name}、さすがですっ！`,
-			`${name}、えらすぎます...！`,
+			`できて当然ですよね、${name}`,
+			/**`${name}、さすがですっ！`,
+			`${name}、えらすぎます...！`, */
 		] : [
-			`よく出来ました♪`,
-			`さすがですっ！`,
-			`えらすぎます...！`,
+			`できて当然ですよね`,
+			/**`さすがですっ！`,
+			`えらすぎます...！`, */
 		],
 
-		cancel: `わかりました。`,
+		cancel: `あれ、諦めたんですか？？`,
 	},
 
 	/**
@@ -382,8 +382,8 @@ export default {
 	},
 
 	sleepReport: {
-		report: hours => `んぅ、${hours}時間くらい寝ちゃってたみたいです`,
-		reportUtatane: 'ん... うたた寝しちゃってました',
+		report: hours => `ぬおーーーーー、${hours}時間くらい寝てた`,
+		reportUtatane: 'ぬおーーーーー、寝てた',
 	},
 
 	noting: {
@@ -458,9 +458,9 @@ export default {
 			'にゃん♪',
 			'(*>ω<*)',
 		],
-		want: item => `${item}、欲しいなぁ...`,
-		see: item => `お散歩していたら、道に${item}が落ちているのを見たんです！`,
-		expire: item => `気づいたら、${item}の賞味期限が切れてました…`,
+		want: item => `${item}が欲しくなってきた`,
+		see: item => `久しぶりに外に出たら、道に${item}が落ちてた`,
+		expire: item => `冷蔵庫漁ったら、賞味期限切れの${item}がでてきた`,
 	},
 };
 
